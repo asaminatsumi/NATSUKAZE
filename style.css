@@ -180,7 +180,7 @@ section {
   position:absolute;
   display: flex;
 }
-.food-p p {
+.food-p {
   text-align: center;
 }
 .sushi {
@@ -190,7 +190,7 @@ section {
 }
 .karaage {
   top:10%;
-  left:60%;
+  left:55%;
   flex-direction: row-reverse;
 }
 .pizza {
@@ -199,7 +199,10 @@ section {
 }
 .cheese {
   top:55%;
-  left:60%;
+  left:58%;
+}
+.cheese .food-p {
+	transform:translate(-1em,0);
 }
 /* section4
 ------------------------------- */  
@@ -314,43 +317,53 @@ footer {
       background-size: cover;
       min-height: 1400px;
     }
+    .food {
+      height:auto;
+    }
     .food-item {
-      position: static;
-      justify-content: center;
+      position:relative;
+      top:0;
+      left:0;
       margin: 2em;
     }
     .food-item img {
       width: 200px;
-	  display:block;
+      display:block;
     }
-    .food-p p {
+    .food-p  {
       width: 200px;
+      text-align:center;
+    }
+    .img-p {
+      margin: 0 auto;
     }
     .number {
       font-size: 60px;
-		width:65px
+      position:absolute;
     }
-    .sushi  {
-      flex-direction: row;
-      text-align: right;
-	  justify-content:start;
-    }
-    .karaage  {
-      flex-direction: row-reverse;
-      text-align: left;
-		justify-content:end;
-    }
-    .pizza{
-      flex-direction: row;
-      text-align: right;
-    }
-    .cheese {
-      flex-direction: row-reverse;
-      text-align: left;
-    }
+    .sushi .number {
+        top:0;
+        left:-1rem;
+      }
+    .karaage .number {
+        top:0;
+        right:-1rem;
+      }
+    .pizza .number {
+        top:0;
+        left:-1rem;
+      }
+    .cheese .number {
+        position:absolute;
+        top:0;
+        right:-1rem;
+      }
+    .cheese .food-p {
+        transform: none;
+      } 
     .info-contents {
-      flex-direction: column;
-    }
+        flex-direction: column;
+      }
     .bottle {
       width: 60%;
       display: block;
@@ -362,14 +375,8 @@ footer {
     footer {
       height: 160px;
     }
-    .footer-items {
-      flex-direction: column;
-    }
     .footer-items img {
       display: none;
-    }
-    .footer-items p {
-      padding-top: 12px;
     }
 }
 
